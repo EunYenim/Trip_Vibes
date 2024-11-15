@@ -12,9 +12,8 @@ html{
 body {
     background-color: lightslategrey;
     margin: 0;
-    overflow-x: hidden; /* 수평 스크롤 방지 */
-    scroll-behavior: smooth; /* 부드러운 스크롤 */
-}
+    overflow-x: hidden; 
+    scroll-behavior: smooth; }
 
 /* font setting */
 @font-face {
