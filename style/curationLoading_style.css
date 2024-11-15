@@ -1,0 +1,228 @@
+#loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 추가된 컨테이너 스타일 */
+.loading_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    transition: right 1s ease, opacity 0.5s ease;
+}
+
+.loading_container.slide-out {
+    right: -100%;
+    opacity: 0;
+}
+
+.selected_01, .selected_02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 33.8%;
+    padding-top: 10vh;
+    z-index: 5;
+    transition: right 1s ease, opacity 0.5s ease; /* 슬라이드 아웃 애니메이션 */
+}
+
+.selected_01.slide-out, .selected_02.slide-out {
+    right: -100%;
+    opacity: 0;
+}
+
+.selected_01 img, .selected_02 img {
+    width: 100%;
+    padding: 4.58vw;
+    padding-bottom: 20vh;
+    transition: transform 1.2s ease, opacity .5s ease, filter .1s ease-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.grow-back {
+    transform: scale(8);
+    filter: brightness(0.3);
+    padding: 0;
+}
+
+.loading_ani {
+    position: absolute;
+    z-index: 1000;
+    width: 66vw;
+    opacity: 1;
+}
+
+.loading_text {
+    z-index: 1000;
+    font-family: 'pretendard_B';
+    color: rgb(0, 255, 148);
+    font-size: 2.6vw;
+    margin-bottom: 70vh;
+    opacity: 0;
+    transition: opacity .6s ease; 
+}
+/* vedio */
+.video {
+    position: absolute;
+    right: -100%; /* 처음에는 화면 오른쪽 밖에 위치 */
+    opacity: 1;
+    transition: right 1s ease, opacity 1s ease;
+    font-size: 2vw;
+    color: white;
+    z-index: 1000;
+    background-color: #121112;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video.slide-in {
+    right: 0%; /* 슬라이드 인된 후 위치 */
+    opacity: 1;
+}
+
+.video_item {
+    width: 64vw;
+    display: none;
+    margin-top: 15vh;
+}
+
+.video_item.show {
+    display: block;
+}
+
+.replay_button.show {
+    display: inline-block;
+}
+
+.replay_button {
+    top: 50%;
+    background-color: transparent;
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1.8vw solid transparent;
+    border-bottom: 1.8vw solid transparent;
+    border-left: 3vw solid rgb(221, 221, 221); /* 삼각형 색상 */
+    cursor: pointer;
+    transition: transform 0.1s ease, border-left-color 0.3s ease;
+}
+
+.replay_button:active {
+    transform: translateX(-50%) scale(0.9);
+}
+
+.replay_button:hover {
+    border-left-color: rgb(0, 255, 148);
+}
+
+.vtc {
+    position: absolute;
+    font-size: 2vw;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    top: 5vh;
+    font-family: 'pretendard_R';
+    font-size: 1.2vw;
+    width: 62vw;
+    height: 14vh;
+}
+
+.vtc div {
+    flex: 1;
+}
+
+.vtc div:nth-of-type(1) {
+    padding-right: 8vw;
+}
+.vtc div:nth-of-type(2) {
+   font-size: 1vw;
+   line-height: 3.2vh;
+   text-align: right;
+   padding-top: 6vh;
+
+}
+
+.vtc p:nth-of-type(2) {
+    font-family: 'pretendard_B';
+    font-size: 4vw;
+    color: rgb(0, 255, 148);
+    padding-top: .6vh;
+}
+
+.vtc.show {
+    opacity: 1;
+}
+
+.video_button_container {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    margin-top:2.2vh;
+    justify-content: flex-end; /* 버튼을 오른쪽에 정렬 */
+    width: 62vw;
+}
+
+.video_line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.video_line .line {
+    background-color: rgb(221, 221, 221); /* 선 색상 */
+}
+
+.video_button_container button {
+    width: 10vw;
+    padding: 14px 8px;
+    font-family: 'pretendard_R';
+    font-size: .96vw;
+    color: #121112;
+    background-color: rgb(221, 221, 221); /* 흰색 배경 */
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.video_button_container button:hover {
+    background-color: rgb(0, 255, 148);
+    color: #121112;
+}
+
+.video.slide_out {
+    right: -100%;
+    opacity: 0;
+    transition: right 1s ease, opacity 0.5s ease;
+}
+

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Vibes</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style_main.css">
+    <script src="./script/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="nav_bar">
+            <div class="logo"><img src="/sources/img/TripVibe_Logo .png" alt="logo"></div>
+            <ul class="nav_links">
+                <li>Home</li>
+                <li>What's My Trip-Vibes</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro_video" class="intro_video">
+            <div>
+                <video src="./sources/video/나보다 날 더 잘 아는 ｜ 스포티파이.mp4"></video>
+            </div>
+            <div class="replay" id="replayButton"></div>
+        </section>
+        <section class="intro_logo">
+            <div class="intro_text">여행과 즐기는 나만의 음악</div>
+            <div class="intro_img">
+                <img src="/sources/img/intro_img.png" alt="">
+            </div>
+        </section>
+        <section class="guide">
+            <div>
+                <p>! 효과적인 몰입을 위해 아래로 천천히 스크롤 해주세요!</p>
+            </div>
+        </section>
+        <section class="trigger_intro">
+            <div class="trigger_text">
+            <p>잊고 있었던</p>
+            <p class="tri_highlight" style="padding-bottom: .6vh;">여행의 추억을 음악으로</p>
+            <p class="tri_highlight">다시 만나는 경험</p>
+            <p>해보신 적 있나요?</p>
+        </div></section>
+        <section class="trigger_main"><div>
+            <div class="tri_img_container">
+                <div>
+                    <img src="/sources/img/trigger_img01.png" alt="">
+                </div>
+                <div>
+                    <img src="/sources/img/trigger_img02.png" alt="">
+                </div>
+                <div>
+                    <img src="/sources/img/trigger_img03.png" alt="">
+                </div>
+                <div>
+                    <img src="/sources/img/trigger_img04.png" alt="">
+                </div>
+            </div>
+            <div class="tri_text_containter">
+                <div style="line-height: 3.2vh;">
+                    <p style="font-family: 'pretendard_R'; font-size: 1.2vw;">주말, 한적한 카페에서</p>
+                    <p style="font-family: 'pretendard_R'; font-size: 1.2vw;">여유를 즐기고 있을 때</p>
+                    <p style="font-family: 'pretendard_B'; font-size: 1.8vw; padding-top:3vh; padding-bottom: 2vh;">어느 순간 <span style="color: rgb(0, 255, 148);">익숙한</span></p>
+                    <p style="font-family: 'pretendard_B'; font-size: 1.8vw;"><span style="color: rgb(0, 255, 148);">멜로디</span>가 흘러나옵니다.</p>
+                </div>
+                <div>
+                    <p style="font-size: 1.8vw; padding-bottom: 4vh;">그 음악은</p>
+                    <p>당신이 잊고 있었던</p>
+                    <p><span style="color: #00FF94;">몰디브의 해변가</span>로 데려가고</p>
+                </div>
+                <div>
+                    <p><span style="color: #00FF94;">스위스</span>의 아름다운</p>
+                    <p>알프스 풍경을 감상하며</p>
+                    <p><span style="color: #00FF94;">기차를 타던 순간</span>을 떠올리게 하며</p>
+                </div>
+                <div>
+                    <p style="color: #00FF94;">바르셀로나에서</p>
+                    <p><span style="color: #00FF94;">친구와 함께 저녁노을</span>을</p>
+                    <p>바라보던 그 특별한 시간으로 안내합니다.</p>
+                </div>
+            </div>
+        </div></section>
+        <section class="trigger_con">
+            <div class="tri_con_text0">음악은 마음속 여행을 다시 불러일으키고 &nbsp;<span class="tri_con_text">그 순간을 생생하게 회상</span>&nbsp;하게 해줍니다.</div>
+        </section>
+        <section class="music_img_container">
+            <div class="img_box">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player 
+                    id="musicLottie" 
+                    src="https://lottie.host/c97e993f-5f8f-4e5e-97f4-783fb049d0e4/wIiBvACniv.json"
+                    background="transparent" 
+                    speed="1" 
+                    direction="1" 
+                    playMode="normal" 
+                    autoplay>
+                </dotlottie-player>
+        </div>
+            <div class="text_box">
+                <p>대중적이고 감성적인&nbsp;<span style="font-family: 'pretendard_B'; color:rgb(0, 255, 148); font-size: 1.6vw;">음악은 여행지마다 특유의 이미지를 다양한 장르로 표현하여</span></p>
+                <p><span style="font-family: 'pretendard_B'; color:rgb(0, 255, 148);">누구나 공감하고 다른 사람과 동일한 분위기를 공유</span>할 수 있습니다.</p>
+            </div>
+            <div class="triangle">
+                <img src="/sources/img/triangle.png" alt="">
+                <img src="/sources/img/triangle.png" alt="">
+            </div>
+        </section>
+        <section class="ex_logo">
+            <div>
+                <p>이와 같은 특성을 반영하여 Trip-Vives는 새로운 여행지 추천 서비스를 제공합니다.</p>
+            </div>
+            <div class="ex_logo_img">
+                <img src="./sources/img/what's.png" alt="">
+            </div>
+        </section>
+        <section class="click_main_link" id="click_main_link">
+            <div>
+            <div>
+                <div class="click_title">
+                <p>어떤 경험을 제공하나요?</p>
+                </div>
+                <div style="padding-bottom: 18vh;" class="click_text">
+                <p>선호하는 음악을 세밀하게 분석하여</p>
+                <p><span style="font-family: 'pretendard_B'; font-size: 1.8vw;">나의 취향의 분위기를 가진 여행지를 추천</span>합니다.</p>
+                </div>
+                <a href="/curation_intro.html" class="link_button">
+                    <p>나만의 여행지 추천 받으러가기</p>
+                  </a>
+            </div>
+        </div>
+        </section>
+        <section class="project_process">
+            <img src="./sources/img/Pro_Process.svg" alt="">
+        </section>
+        <section class="bg_01">
+            <div class="index_text">
+                <p>Background</p>
+                <div class="circle_s"></div>
+                <p>변화된 여행 트렌드</p>
+            </div>
+            <div class="body_text">
+                <p>여행업계는 챗GPT와 같은 AI를 활용한</p>
+                <p><span style="font-family: 'pretendard_B'; color: #00FF94; padding-bottom: 1vh; font-size: 2.6vw"> 맞춤형 상품 추천 서비스를 적극적으로 확대</span>하고 있습니다.</p>
+                <p><span style="font-size: .8vw; color: #A7AFB6;">2024 한국관광공사 국내여행 트렌드</span></p>
+            </div>
+            <div class="con_text">
+                <p><span style="font-family: 'pretendard_B';"> AI기반의 여행지 추천 서비스</span>와 SNS를 통한 여행 경험 공유의 대세</p>
+            </div>
+        </section>
+        <section class="bg_01">
+            <div class="index_text">
+                <p>Targeting</p>
+                <div class="circle_s"></div>
+                <p>주 소비자층</p>
+            </div>
+            <div class="body_text">
+                <p>20대의 <span style="font-family: 'pretendard_B'; color: #00FF94; padding-bottom: 1vh; font-size: 3vw;"> 89%</span>가 여행지에서 음악의 역할이 중요하다고 여기며</p>
+                <p>여행 중 분위기에 맞는 음악을 듣는 것을 선호합니다.</p>
+                <p><span style="font-size: .8vw; color: #A7AFB6;">2020 여기어때 20대 여행 트랜드 설문 결과</span></p>
+            </div>
+            <div class="con_text">
+                <p>좋아하는 음악과 함께 즐길 수 있는 새로운 여행지를 원하는<span style="font-family: 'pretendard_B'; font-size: 1.8vw;">&nbsp; MZ 세대</span></p>
+            </div>
+        </section>
+        <section class="strategy">
+            <div class="index_text">
+                <p>Strategy</p>
+                <div class="circle_s"></div>
+                <p>차별화 전략</p>
+            </div>
+            <div class="st_container">
+            <div class="st_text_container_01">
+            <div class="st_text_01">
+                <p style="font-size: 1.2vw; color: #878a8e; padding-bottom:1vh;">01</p>
+                <p>Audio</p>
+                <p>Visualization</p>
+            </div>
+            <div class="st_text_02">
+                <p>영상미디어를 통한 '보는 음악'</p>
+                <p>숏폼 영상 플랫폼의 증가로 음악 감상과 함께</p>
+                <p>시각적 요소를 즐기는 새로운 청음 문화가 형성되었습니다.</p>
+            </div>
+        </div>
+            <div class="st_img_01">
+                <img src="/sources/img/visual_ex.png" alt="">
+            </div>
+        </div>
+        </section>
+        <section class="strategy">
+            <!-- <div class="index_text">
+                <p>Strategy</p>
+                <div class="circle_s"></div>
+                <p>차별화 전략</p>
+            </div> -->
+            <div class="st_container">
+            <div class="st_text_container_02">
+            <div class="st_text_01">
+                <p style="font-size: 1.2vw; color: #878a8e; padding-bottom:1vh;">02</p>
+                <p>Technical</p>
+                <p style="padding-left: .2vw;">Graphics</p>
+            </div>
+            <div class="st_text_02">
+                <p>디지털 세대의 그래픽 트렌드</p>
+                <p>디지털 기술에 익숙한 MZ세대들은</p>
+                <p>힙하고 독창적인 테크놀로지 그래픽을 선호합니다.</p>
+            </div>
+        </div>
+            <div class="st_img_01">
+                <img src="/sources/img/tech_ex.png" alt="">
+            </div>
+        </div>
+        </section>
+        <section class="motif_ex">
+            <div class="motif_ex_title">
+                <p> What's My Trip-Vibes에는 이렇게 반영되었어요.</p>
+            </div>
+            <div class="motif_ex_img">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module">
+                </script><dotlottie-player src="https://lottie.host/ecda8c88-db0f-498a-b014-0345f2ccb10a/ufG4GusEl1.json" 
+                background="transparent" speed="1"
+                direction="1" playMode="normal"  autoplay></dotlottie-player>
+        </div>
+        </section>
+        <section class="design_system">
+            <img src="./sources/img/Design System.svg" alt="">
+        </section>
+        <section class="design_motif">
+            <div class="index_text">
+                <p>Strategy</p>
+                <div class="circle_s"></div>
+                <p>차별화 전략</p>
+            </div>
+            <div class="design_motif_container ">
+                <p>Sound Wave</p>
+                <div class="img_container">
+                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module">
+                    </script><dotlottie-player src="https://lottie.host/ff7a2ee8-9646-482f-967a-6ad5e85fb894/gVg1OSxXLt.json" 
+                    background="transparent" speed="1" 
+                    direction="1" playMode="normal"autoplay></dotlottie-player>
+        </div>
+                <p>사운드를 시각화한 사운드웨이브 중 <span style="font-family: 'pretendard_B';">여행지의 자연과
+                    <br>조화를 이룰 수 있는 원과 곡선</span>을 사용했습니다.
+                </p>
+            </div>
+        </section>
+        <section class="design_motif_02">
+            <div class="index_text">
+                <p>Strategy</p>
+                <div class="circle_s"></div>
+                <p>차별화 전략</p>
+            </div>
+            <div class="design_motif_container">
+                <p>Rectangle Frame</p>
+                <div class="img_container_02">
+                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                    <dotlottie-player src="https://lottie.host/dc4e2094-759f-4db5-b5f6-c1713687828f/VxIQDDgZl1.json" 
+                    background="transparent" speed="1"
+                    direction="1" playMode="normal" autoplay></dotlottie-player>
+                </div>
+                <p>숏폼에서 음악을 즐기는 트렌드를 착안하여, 
+                    <br>익숙한 비율인 <span style="font-family:'pretendard_B';"> 9:16의 직사각형 프레임을 전체적인 
+                <br>이미지와 레이아웃에 반영</span>했습니다.
+                </p>
+            </div>
+        </section>
+        <section class="color">
+            <div>
+            <div class="index_text">
+                <p>Color</p>
+                <div class="circle_s"></div>
+                <p>메인 컬러</p>
+            </div>
+            <div class="color_title">
+                <p >Nature + Tech</p>
+            </div>
+            <div class="color_text">
+                <div>
+                    <p><span style="font-family: 'pretendard_B';">자연과 테크의 조합</span> 은 부조화스러우면서도
+                    <br>특유의 힙한 감성을 유발합니다.  
+                    <br>
+                    <br>메인컬러는 이러한 조합을 
+                    <br>상징하는 컬러로 설정하였습니다.</p></div>
+                <div> <img src="./sources/img/color.png" alt=""></div>
+            </div>
+            <div class="color_img">
+                <img src="./sources/img/color_motif.png" alt="">
+            </div>
+        </div>
+        </section>
+        <section class="logo_type">
+            <div class="index_text">
+                <p>Logo Type</p>
+                <div class="circle_s"></div>
+                <p>로고타입</p>
+            </div>
+            <div class="design_motif_container_03">
+                <div class="img_container_03">
+                    <img src="./sources/img/logo_img.png" alt="">
+                </div>
+                <p>원과 선의 모티프를 활용하여, <span style="font-family:'pretendard_B';">여행지와 음악의 상관관계를 보여주는 로고</span>를 제작했습니다.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

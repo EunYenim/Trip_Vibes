@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip vibes</title>
+    <link rel="stylesheet" href="./style/curation_style.css">
+    <link rel="stylesheet" href="./style/curationLoading_style.css">
+    <script src="./script/curation.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="nav_bar">
+            <div class="logo"><img src="/sources/img/TripVibe_Logo .png" alt="logo"></div>
+            <ul class="nav_links">
+                <li>Home</li>
+                <li>What's My Trip-Vibe</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="outer_wrapper">
+        <section id="select">
+        <div class="intro wrapper">
+            <div class="column first_column">
+                <div class="text_box">
+                <div style="font-size: 70px;">What's</div>
+                <div> My Trip-Vibe?</div>
+                <div class="guide">
+                <div class="guide_text"> 스크롤하여 다른 음악을 들어보실 수 있습니다.</div>
+                <div class="guide_text"> 마음에 드는 음악의 이미지를 선택하여 결과를 확인하세요.</div>
+            </div>
+        </div>
+            </div>
+            <div class="column image_column">
+                <img src="/sources/img/mrhappy.png" alt="image1" class="scroll_image first_img" data-audio="/sources/audio/bali.mp3">
+                <!-- <img src="/sources/img/cover_img_sample01.jpg" alt="image1" class="scroll_image "> -->
+                <img src="/sources/img/smooth.png" alt="image2" class="scroll_image" data-audio="/sources/audio/amsterdam.mp3">
+                <img src="/sources/img/dutch.png" alt="image3" class="scroll_image" data-audio="/sources/audio/Hawai.mp3">
+                <img src="/sources/img/troubles.png" alt="image4" class="scroll_image last_img" data-audio="/sources/audio/alaska.mp3">
+                <img src="/sources/img/troubles.png" alt="image4" class="scroll_image last_img">
+            </div>
+            <div class="column third_column">
+                <div class="01_img">
+                    <img src="/sources/img/01_img.png" class="number_img" style="width: 6.8vw;">
+                    <p class="title">Mr.Happy</p>
+                    <div class="line"></div>
+                    <p class="artist">Wizzy</p>
+                    <div class="tag_container">
+                    <div class="tag"> #Hyper Pop</div>
+                    <div class="tag"> #Accustic guitar</div>
+                </div>
+                </div>
+                <div class="02_img">
+                    <img src="/sources/img/02_img.png"  class="number_img">
+                    <p class="title">Smooth Criminal</p>
+                    <div class="line"></div>
+                    <p class="artist">GENRE</p>
+                    <div class="tag_container">
+                    <div class="tag"> #RNB</div>
+                    <div class="tag"> #Hip Pop</div>
+                </div>
+                </div>
+                
+                <div class="03_img"><img src="/sources/img/03_img.png"  class="number_img">
+                    <p class="title">Aizen Plans</p>
+                    <div class="line"></div>
+                    <p class="artist">Wizzy</p>
+                    <div class="tag_container">
+                    <div class="tag"> #Hyper Pop</div>
+                    <div class="tag"> #Accustic guitar</div>
+                </div>
+                </div>
+
+                <div class="04_img">
+                    <img src="/sources/img/04_img.png"  class="number_img">
+                    <p class="title">Troubles</p>
+                    <div class="line"></div>
+                    <p class="artist">Prodbywander</p>
+                    <div class="tag_container">
+                    <div class="tag"> #Orchestral</div>
+                    <div class="tag"> #Stormzy</div>
+                </div>
+            </div>
+        </div>
+        <div class="column fourth_column">
+            <div>1 / 4</div>
+            <div>2 / 4</div>
+            <div>3 / 4</div>
+            <div>4 / 4</div>
+        </div>
+        </div>
+    </section>
+    <section id="loading" class="hidden">
+        <div class="loading_container"> <!-- 새 컨테이너 추가 -->
+            <div class="loading_ani">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" 
+                type="module"></script><dotlottie-player src="https://lottie.host/4647cc70-aa1e-423e-99e8-767f3a67f0ed/Ie3KQobENB.json" 
+                background="transparent" speed="1"
+                direction="1" playMode="normal"></dotlottie-player>
+            </div>
+            <div class="selected_01">
+                <img src="/sources/img/mrhappy.png" alt="">
+                <img src="/sources/img/smooth.png" alt="" class="hidden">
+                <img src="/sources/img/dutch.png" alt="" class="hidden">
+                <img src="/sources/img/troubles.png" alt="" class="hidden">
+            </div>
+            <div class="selected_02">
+                <img src="/sources/img/mrhappy_1.png" alt="">
+                <img src="/sources/img/smooth.png" alt="" class="hidden">
+                <img src="/sources/img/dutch.png" alt="" class="hidden">
+                <img src="/sources/img/troubles.png" alt="" class="hidden">
+            </div>
+            <div class="loading_text">
+                <p>선택한 음악을 분석 중 입니다...</p>
+            </div>
+        </div>
+        <div class="video">
+            <video class="video_item hidden" data-video="0" src="/sources/video/Bali_1105.mp4" muted></video>
+            <video class="video_item hidden" data-video="1" src="/sources/video/amsterdam_1105.mp4" muted></video>
+            <video class="video_item hidden" data-video="2" src="/sources/video/Hawai_1105.mp4" muted></video>
+            <video class="video_item hidden" data-video="3" src="/sources/video/Alaska__1105.mp4" muted></video>
+
+            <div class="video_button_container">
+                <button onclick="slideOutVideo()">음악 다시 선택하기</button>
+                <button onclick="location.href='index.html#click_main_link'">홈으로 돌아가기</button>
+            </div>
+            <button class="replay_button hidden"></button>
+                <div class="video_text_container_01 vtc">
+                    <div> 
+                    <p>당신의 추천 여행지는</p>
+                    <p>Bali  발리</p>
+                </div>
+                <!-- <div class="video_line">
+                    <div class="line"></div>
+                </div> -->
+                <div>
+                    발리는 인도네시아의 열대 기후 섬입니다. 
+                    <br>독특한 무늬를 가진 발리스탈링을 만날 수 있습니다.
+                </div>
+                </div>
+                <div class="video_text_container_02 vtc">
+                    <div style="padding-top: 3.4vh;"> 
+                        <p>당신의 추천 여행지는</p>
+                    <p style="font-size: 2.6vw;">Amsterdam 암스테르담</p>
+                </div>
+                <!-- <div class="video_line"></div> -->
+                <div>
+                    암스테르담은 네덜란드의 아름다운 도시이며
+                    <br>운하의 백조들을 감상하는 여유를 즐길 수 있습니다.
+                </div>
+                </div>
+                <div class="video_text_container_03 vtc">
+                    <div> 
+                        <p>당신의 추천 여행지는</p>
+                    <p>Hawai 하와이</p>
+                </div>
+                <!-- <div class="video_line"></div> -->
+                <div>
+                    하와이는 미국의 열대 기후 군도이며
+                    <br>청량한 파도에서의 서핑을 즐길 수 있습니다.
+                </div>
+                </div>
+                <div class="video_text_container_04 vtc">
+                    <div style="padding-top: 1.4vh;"> 
+                        <p>당신의 추천 여행지는</p>
+                    <p style="font-size: 3.4vw;">Alaska 알래스카 </p>
+                </div>
+                <!-- <div class="video_line"></div> -->
+                <div>
+                    수면 위로 떠오른 웅장한 혹등고래는 
+                    <br>알래스카의 가장 유명한 볼거리입니다.
+                </div>
+            </div>
+        </div>
+</section>
+</main>
+</body>
+</html>

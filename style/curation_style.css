@@ -1,0 +1,326 @@
+/*setting*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+/* overflow: hidden; */
+}
+main {
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+/*font settig*/
+@font-face {
+    font-family:'title_Aroug';
+    src: url('/sources/font/BlackAroug-DemoVersion-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'pretendard_R';
+    src: url('/sources/font/pretendard/Pretendard-Regular.woff') format('truetype');
+}
+
+@font-face {
+    font-family:'pretendard_L';
+    src: url('/sources/font/pretendard/Pretendard-Light.woff') format('truetype');
+}
+
+@font-face {
+    font-family:'pretendard_M';
+    src: url('/sources/font/pretendard/Pretendard-Medium.woff') format('truetype');
+}
+
+@font-face {
+    font-family:'pretendard_B';
+    src: url('/sources/font/pretendard/Pretendard-Bold.woff') format('truetype');
+}
+
+@font-face {
+    font-family:'pretendard_SB';
+    src: url('/sources/font/pretendard/Pretendard-SemiBold.woff') format('truetype');
+}
+/* navBar setting */
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 2rem 3rem;
+    background-color: rgba(28, 28, 28, 0.8);
+    color: rgb(221, 221, 221);
+    z-index: 10;
+    height: 6vh;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+}
+
+.nav_bar .logo img {
+    width: 8vw;
+    height: auto;
+}
+
+.nav_bar .nav_links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    font-size: 1.2rem;
+    align-items: center;
+    font-family:"pretendard_R" ;
+}
+
+.nav_bar .nav_links li {
+    border: 1px solid rgb(221, 221, 221); 
+    padding: 6px 16px;
+    font-size: .8vw;
+    font-family: "pretendard_L"; 
+    color: rgb(221, 221, 221);
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav_bar .nav_links li:hover {
+    background-color: rgb(221, 221, 221);
+    color: black;
+}
+/* slide setting */
+.outer_wrapper {
+    display: flex;
+    flex-direction:row;
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: #121112;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.wrapper {
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+/* select text setting */
+.column.first_column {
+    margin-left: 2vw;
+    display:inline-block;
+    justify-content:right;
+    color: rgb(0, 255, 148); /* 텍스트 색상 */
+    font-family: "pretendard_B";
+    font-size: 4vw; /* 텍스트 크기 조정 */
+    height: 100vh; /* 컬럼의 높이를 전체 뷰포트 높이로 설정 */
+    background-color: #121112; /* 배경색 및 투명도 추가 */
+    padding: 20px; /* 내부 여백 추가 */
+    text-align:left; /* 텍스트 중앙 정렬 */
+}
+.text_box{
+   margin-top: 8vh;
+}
+.guide_text {
+    color:rgb(221, 221, 221);
+    font-family: "pretendard_L";
+    font-size:20px;
+    margin-top: 1vh;
+}
+.guide{
+    padding-top: 3vh;
+    padding-bottom: 4vh;
+}
+/* select page setting */
+.image_column::-webkit-scrollbar {
+    display: none; 
+}
+
+.intro.wrapper {
+    display:flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px; 
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.column {
+    /* margin-bottom: 16vh; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column.first_column {
+    flex-basis: 34%; /* 첫 번째 컬럼의 가로 크기 설정 */
+}
+
+.column.image_column {
+    flex-basis: 28%; /* 두 번째 컬럼의 가로 크기 설정 */
+}
+
+.column.third_column {
+    flex-basis: 20%; /* 세 번째 컬럼의 가로 크기 설정 */
+}
+
+.column.fourth_column {
+    flex-basis: 20%; /* 네 번째 컬럼의 가로 크기 설정 */
+}
+
+.first_img {
+    margin-top: 280vh; 
+}
+
+.image_column {
+    cursor: pointer;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    align-items: center;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    padding: 0;
+    /* margin: 14vw; */
+}
+
+
+.image_column .scroll_image {
+    width:11.25vw;
+    height: 20vw;
+    object-fit: cover;
+    margin-bottom: 24.2vh;
+    scroll-snap-align: center;
+    filter: grayscale(100%) brightness(70%) blur(1.8px);
+    transition: transform 0.5s ease, filter 0.5s ease;
+    /* padding: -2vw; */
+}
+
+.scroll_image.selected {
+    transform: scale(1.68);
+    filter: grayscale(0%);
+}
+
+.scroll_image:last-child {
+    visibility: hidden;
+}
+/* select img animation */
+.clicked_img{
+    animation: clickAnimation .2s ease-in-out; /* 클릭 시 애니메이션 적용 */
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1.4); /* 기본 크기 */
+    }
+    40% {
+        transform: scale(1.48);
+    }
+    80% {
+        transform: scale(1.6);
+    }
+    100% {
+        transform: scale(1.68); /* 다시 원래 크기로 돌아옴 */
+    }
+}
+
+
+
+.third_column {
+    display: flex;
+    flex-direction: column;
+    color: rgb(221, 221, 221);
+    height: 100vh;
+    justify-content: flex-start; /* 상단에서부터 시작 */
+    align-items:flex-start;
+    padding-top: 24vh;
+    /* padding-left: 1vw; */
+}
+
+.number_img {
+    width: 8vw;
+    height: auto;
+    display: none; /* 이미지 숨김 */
+}
+
+.title, .artist, .tag_container {
+    opacity: 0; /* 초기 투명도 0 */
+    transform: translateX(-50px); /* 왼쪽에서 이동 시작 */
+    animation: slideIn 1s forwards; /* 애니메이션 실행 */
+}
+
+.title {
+    padding-top: 4vh;
+    animation-delay: 0.3s; /* 첫 번째 애니메이션 0.3초 지연 */
+    font-family: "pretendard_SB"; 
+    font-size: 2.2vw;
+}
+
+.artist {
+    padding-top: 1.4vh;
+    animation-delay: 0.6s; /* 두 번째 애니메이션 0.6초 지연 */
+    font-family: "pretendard_B"; 
+    font-size: 1.2vw;
+    color:rgb(167, 175,182);
+}
+
+.tag_container {
+    padding-top: 1.4vh;
+    animation-delay: 0.9s; /* 세 번째 애니메이션 0.9초 지연 */
+    display: flex;
+    gap: .3vw;
+}
+
+.tag {
+    border: 1px solid rgb(167, 175,182); 
+    padding: 6px 16px;
+    font-size: 1vw;
+    font-family: "pretendard_L"; 
+    color:rgb(167, 175,182);
+    border-radius: 20px;
+}
+
+.line {
+    padding-top: 22vh;
+    width: 1.4vw;
+    border-bottom: 2px solid  rgb(167, 175,182);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); /* 왼쪽에서 시작 */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* 제자리로 이동 */
+    }
+}
+
+.fourth_column {
+    height: 100vh;
+    color:rgb(98, 102, 107);
+    font-family: "pretendard_B";
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 1vw;
+    padding-bottom: 2vh;
+    padding-right: 1vw;
+}
+
+
