@@ -1,48 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const videoElement = document.querySelector("#intro_video video");
-  const replayButton = document.getElementById("replayButton");
+document.addEventListener("DOMContentLoaded", () => {
+  const videoElement = document.querySelector("#videoElement");
+  const replayButton = document.querySelector("#replayButton");
 
-  let hasPlayedOnce = false;
-
-  // 비디오 무음 설정 및 자동 재생
-  videoElement.muted = true;
-  videoElement.play()
-    .then(() => {
-      hasPlayedOnce = true;
-    })
-    .catch((error) => {
-      console.error("Video play failed:", error);
-    });
-
-  // Intersection Observer 설정
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          // 비디오가 화면에서 벗어날 때
-          videoElement.pause();
-          if (!isNaN(videoElement.duration)) {
-            videoElement.currentTime = videoElement.duration;
+  // 비디오 메타데이터가 로드된 후 실행
+  videoElement.addEventListener("loadedmetadata", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            // 화면에서 벗어나면 비디오 정지 및 끝으로 이동
+            videoElement.pause();
+            if (!isNaN(videoElement.duration)) {
+              videoElement.currentTime = videoElement.duration; // 끝난 상태로 설정
+            }
+            replayButton.style.display = "block"; // 리플레이 버튼 표시
           }
-          replayButton.style.display = "block";
-        } else {
-          // 비디오가 화면에 다시 들어올 때
-          replayButton.style.display = "none";
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
+        });
+      },
+      { threshold: 0.5 } // 50% 이상 보일 때 트리거
+    );
 
-  observer.observe(document.querySelector("#intro_video"));
+    observer.observe(document.querySelector("#intro_video"));
+  });
+
+  // 비디오가 종료되었을 때 리플레이 버튼 표시
+  videoElement.addEventListener("ended", () => {
+    replayButton.style.display = "block";
+  });
+
+  // 비디오가 재생될 때 리플레이 버튼 숨기기
+  videoElement.addEventListener("play", () => {
+    replayButton.style.display = "none";
+  });
 
   // 리플레이 버튼 클릭 이벤트
   replayButton.addEventListener("click", () => {
-    videoElement.currentTime = 0;
-    videoElement.play();
-    replayButton.style.display = "none";
+    videoElement.currentTime = 0; // 비디오 처음으로 되감기
+    videoElement.play(); // 재생
+    replayButton.style.display = "none"; // 리플레이 버튼 숨기기
   });
 });
+
 
 
 
