@@ -3,28 +3,49 @@ document.addEventListener("DOMContentLoaded", function() {
   const videoElement = document.querySelector("#intro_video video");
   const replayButton = document.getElementById("replayButton");
 
-  // 첫 진입 시에만 자동 재생
   let hasPlayedOnce = false;
-  videoElement.play();
-  hasPlayedOnce = true; // 자동 재생 플래그 설정
+
+  videoElement.muted = true; // 무음으로 설정
+  videoElement.play()
+    .then(() => {
+      hasPlayedOnce = true; // 자동 재생 플래그 설정
+    })
+    .catch(error => {
+      console.error("Video play failed:", error);
+    });
 
   // Intersection Observer 설정
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (!entry.isIntersecting) {
-              // 섹션을 벗어날 때 비디오를 끝난 상태로 처리
-              videoElement.pause();
-              videoElement.currentTime = videoElement.duration; // 비디오를 끝난 상태로 설정
-              replayButton.style.display = "block"; // 끝난 상태이므로 리플레이 버튼 표시
-          } else if (hasPlayedOnce) {
-              // 처음 재생 이후에는 섹션에 다시 들어와도 비디오를 끝난 상태로 유지
-              videoElement.currentTime = videoElement.duration;
-              replayButton.style.display = "block";
-          }
-      });
-  }, { threshold: 0.5 });
-
-  observer.observe(document.querySelector("#intro_video"));
+  const videoElement = document.querySelector("#videoElement");
+  const replayButton = document.querySelector("#replayButton");
+  
+  // 비디오 메타데이터가 로드된 후에만 실행
+  videoElement.addEventListener("loadedmetadata", () => {
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (!entry.isIntersecting) {
+                  // 화면에서 벗어날 때 비디오를 끝난 상태로 처리
+                  videoElement.pause();
+                  if (!isNaN(videoElement.duration)) {
+                      videoElement.currentTime = videoElement.duration; // 끝난 상태로 설정
+                  }
+                  replayButton.style.display = "block"; // 리플레이 버튼 표시
+              } else {
+                  // 다시 화면에 들어올 때의 동작
+                  replayButton.style.display = "none"; // 리플레이 버튼 숨기기
+              }
+          });
+      }, { threshold: 0.5 });
+  
+      observer.observe(document.querySelector("#intro_video"));
+  });
+  
+  // 리플레이 버튼 클릭 이벤트 설정
+  replayButton.addEventListener("click", () => {
+      videoElement.currentTime = 0; // 비디오 처음으로 되감기
+      videoElement.play(); // 재생
+      replayButton.style.display = "none"; // 리플레이 버튼 숨기기
+  });
+  
 
   // 리플레이 버튼 클릭 시 재생
   replayButton.addEventListener("click", function() {
