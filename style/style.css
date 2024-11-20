@@ -16,7 +16,7 @@ body {
     scroll-behavior: smooth; }
 
 /* font setting */
-@font-face {
+/* @font-face {
     font-family:'title_MOX';
     src: url('./sources/font/MOXA\ Bestine.ttf') format('truetype');
 }
@@ -39,27 +39,27 @@ body {
 @font-face {
     font-family:'title_codeR';
     src: url('./sources/font/CodeNext-Trial-Regular.ttf') format('truetype');
-}
+} */
 @font-face {
     font-family:'pretendard_R';
-    src: url('./sources/font/pretendard/Pretendard_Regular.woff') format('woff');
+    src: url('./sources/font/Pretendard_Regular.woff') format('woff');
 }
 @font-face {
     font-family:'pretendard_B';
-    src: url('./sources/font/pretendard/Pretendard_Bold.woff') format('woff');
+    src: url('./sources/font/Pretendard_Bold.woff') format('woff');
 }
 @font-face {
     font-family:'pretendard_L';
-    src: url('./sources/font/pretendard/Pretendard_Light.woff') format('woff');
+    src: url('./sources/font/Pretendard_Light.woff') format('woff');
 }
 
 @font-face {
     font-family:'pretendard_M';
-    src: url('./sources/font/pretendard/Pretendard_Medium.woff') format('woff');
+    src: url('./sources/font/Pretendard_Medium.woff') format('woff');
 }
 @font-face {
     font-family:'pretendard_SB';
-    src: url('./sources/font/pretendard/Pretendard_SemiBold.woff') format('woff');
+    src: url('./sources/font/Pretendard_SemiBold.woff') format('woff');
 }
 
 /* navBar setting */
