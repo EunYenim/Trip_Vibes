@@ -84,6 +84,7 @@ body {
 }
 
 .nav_bar .nav_links {
+    text-decoration: none;
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -106,6 +107,22 @@ body {
 .nav_bar .nav_links li:hover {
     background-color: rgb(221, 221, 221);
     color: black;
+}
+
+.nav_bar .nav_links a {
+    text-decoration: none;
+    color: inherit;
+    display: block; 
+    width: 100%;
+    height: 100%;
+}
+
+.nav_bar .nav_links a:visited {
+    color: inherit;
+}
+
+.nav_bar .nav_links a:hover {
+    background-color: inherit;
 }
 
 /* intro vedio setting*/

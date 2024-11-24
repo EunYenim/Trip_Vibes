@@ -22,33 +22,25 @@ main {
 
 /*font settig*/
 @font-face {
-    font-family:'title_Aroug';
-    src: url('/sources/font/BlackAroug-DemoVersion-Regular.ttf') format('truetype');
-}
-
-@font-face {
     font-family:'pretendard_R';
-    src: url('/sources/font/pretendard/Pretendard-Regular.woff') format('truetype');
+    src: url('../sources/font/Pretendard_Regular.woff') format('woff');
 }
-
+@font-face {
+    font-family:'pretendard_B';
+    src: url('../sources/font/Pretendard_Bold.woff') format('woff');
+}
 @font-face {
     font-family:'pretendard_L';
-    src: url('/sources/font/pretendard/Pretendard-Light.woff') format('truetype');
+    src: url('../sources/font/Pretendard_Light.woff') format('woff');
 }
 
 @font-face {
     font-family:'pretendard_M';
-    src: url('/sources/font/pretendard/Pretendard-Medium.woff') format('truetype');
+    src: url('../sources/font/Pretendard_Medium.woff') format('woff');
 }
-
-@font-face {
-    font-family:'pretendard_B';
-    src: url('/sources/font/pretendard/Pretendard-Bold.woff') format('truetype');
-}
-
 @font-face {
     font-family:'pretendard_SB';
-    src: url('/sources/font/pretendard/Pretendard-SemiBold.woff') format('truetype');
+    src: url('../sources/font/Pretendard_SemiBold.woff') format('woff');
 }
 /* navBar setting */
 .nav_bar {
@@ -62,7 +54,7 @@ main {
     color: rgb(221, 221, 221);
     z-index: 10;
     height: 6vh;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
 }
 
@@ -72,6 +64,7 @@ main {
 }
 
 .nav_bar .nav_links {
+    text-decoration: none;
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -88,12 +81,28 @@ main {
     font-family: "pretendard_L"; 
     color: rgb(221, 221, 221);
     border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* 배경색과 글자색 변화에 애니메이션 추가 */
 }
 
 .nav_bar .nav_links li:hover {
     background-color: rgb(221, 221, 221);
     color: black;
+}
+
+.nav_bar .nav_links a {
+    text-decoration: none;
+    color: inherit;
+    display: block; 
+    width: 100%;
+    height: 100%;
+}
+
+.nav_bar .nav_links a:visited {
+    color: inherit;
+}
+
+.nav_bar .nav_links a:hover {
+    background-color: inherit;
 }
 /* slide setting */
 .outer_wrapper {
