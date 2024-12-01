@@ -133,11 +133,11 @@ main {
     justify-content:right;
     color: rgb(0, 255, 148); /* 텍스트 색상 */
     font-family: "pretendard_B";
-    font-size: 4.3vw; /* 텍스트 크기 조정 */
-    height: 100vh; /* 컬럼의 높이를 전체 뷰포트 높이로 설정 */
-    background-color: #121112; /* 배경색 및 투명도 추가 */
-    padding: 20px; /* 내부 여백 추가 */
-    text-align:left; /* 텍스트 중앙 정렬 */
+    font-size:4vw; 
+    height: 100vh; 
+    background-color: #121112;
+    padding: 20px; 
+    text-align:left; 
 }
 .text_box{
    margin-top: 8vh;
