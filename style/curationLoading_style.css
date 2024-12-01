@@ -107,9 +107,10 @@
 }
 
 .video_item {
-    width: 64vw;
+    width:64vw;
     display: none;
-    margin-top: 15vh;
+    margin-top: 1vh;
+    padding-top: 1vh;
 }
 
 .video_item.show {
@@ -143,17 +144,14 @@
 }
 
 .vtc {
-    position: absolute;
-    font-size: 2vw;
     opacity: 0;
+    display: none;
     transition: opacity 0.3s ease;
-    display: flex;
     flex-direction: row;
-    top: 5vh;
     font-family: 'pretendard_R';
     font-size: 1.2vw;
-    width: 62vw;
-    height: 14vh;
+    width: 64vw;
+    align-items: flex-end;
 }
 
 .vtc div {
@@ -163,32 +161,33 @@
 .vtc div:nth-of-type(1) {
     padding-right: 8vw;
 }
-.vtc div:nth-of-type(2) {
-   font-size: 1vw;
-   line-height: 3.2vh;
-   text-align: right;
-   padding-top: 6vh;
 
+.vtc div:nth-of-type(2) {
+    font-size: 1vw;
+    line-height: 3.2vh;
+    text-align: right;
+    justify-content: flex-end; /* 하단에 정렬 */
 }
 
 .vtc p:nth-of-type(2) {
     font-family: 'pretendard_B';
-    font-size: 4vw;
+    font-size: 3vw;
     color: rgb(0, 255, 148);
-    padding-top: .6vh;
+    padding-top: 0.6vh;
 }
 
 .vtc.show {
     opacity: 1;
+    display: flex; /* 표시 시 공간 차지하도록 전환 */
 }
 
 .video_button_container {
     display: flex;
     flex-direction: row;
-    gap: 1vw;
-    margin-top:2.2vh;
+    gap: 1.3vw;
+    margin-top:3vh;
     justify-content: flex-end; 
-    width: 62vw;
+    width: 64vw;
 }
 
 .video_line {

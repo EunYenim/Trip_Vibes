@@ -270,8 +270,11 @@ document.addEventListener("DOMContentLoaded", function() {
     function showSelectedTextContainer() {
         videoTextContainers.forEach((container, index) => {
             container.classList.remove("show");
+            container.style.display = "none"; // 숨긴 요소는 자리 차지하지 않음
+    
             if (index === selectedVideoIndex) {
                 container.classList.add("show");
+                container.style.display = "flex"; // 활성화된 요소만 표시
             }
         });
     }
