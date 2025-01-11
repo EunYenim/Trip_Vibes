@@ -166,7 +166,7 @@
     font-size: 1vw;
     line-height: 3.2vh;
     text-align: right;
-    justify-content: flex-end; /* 하단에 정렬 */
+    justify-content: flex-end;
 }
 
 .vtc p:nth-of-type(2) {
@@ -178,7 +178,7 @@
 
 .vtc.show {
     opacity: 1;
-    display: flex; /* 표시 시 공간 차지하도록 전환 */
+    display: flex;
 }
 
 .video_button_container {

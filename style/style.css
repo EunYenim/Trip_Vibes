@@ -15,31 +15,9 @@ body {
     overflow-x: hidden; 
     scroll-behavior: smooth; }
 
-/* font setting */
-/* @font-face {
-    font-family:'title_MOX';
-    src: url('./sources/font/MOXA\ Bestine.ttf') format('truetype');
-}
-@font-face {
-    font-family:'title_Aroug';
-    src: url('./sources/font/BlackAroug-DemoVersion-Regular.ttf') format('truetype');
-}
-@font-face {
-    font-family:'title_codeB';
-    src: url('./sources/font/CodeNext-Trial-Bold.ttf') format('truetype');
-}
-@font-face {
-    font-family:'title_codeH';
-    src: url('./sources/font/CodeNext-Trial-Heavy.ttf') format('truetype');
-}
-@font-face {
-    font-family:'title_codeSB';
-    src: url('./sources/font/CodeNext-Trial-SemiBold.ttf') format('truetype');
-}
-@font-face {
-    font-family:'title_codeR';
-    src: url('./sources/font/CodeNext-Trial-Regular.ttf') format('truetype');
-} */
+
+
+
 @font-face {
     font-family:'pretendard_R';
     src: url('../sources/font/Pretendard_Regular.woff') format('woff');
@@ -101,7 +79,7 @@ body {
     font-family: "pretendard_L"; 
     color: rgb(221, 221, 221);
     border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* 배경색과 글자색 변화에 애니메이션 추가 */
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .nav_bar .nav_links li:hover {
@@ -144,7 +122,7 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 50px solid rgb(221, 221, 221); /* 삼각형 색상 */
+    border-left: 50px solid rgb(221, 221, 221); 
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     cursor: pointer;
@@ -155,7 +133,7 @@ body {
 }
 
 .replay:hover {
-    border-left-color: rgb(0, 255, 148); /* 호버 시 색상 변화 */
+    border-left-color: rgb(0, 255, 148); 
 }
 
 /* intro logo setting */
@@ -238,7 +216,7 @@ height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* 스크롤 방지 */
+    overflow: hidden;
     position: relative;
   }
   
@@ -333,14 +311,14 @@ height: auto;
     transform: translateY(30px);
     background-image: linear-gradient(90deg,rgb(0, 255, 148) 0%, rgb(0, 255, 148) 100%);
     background-repeat: no-repeat;
-    background-size: 0% 100%; /* 처음에는 박스가 없는 상태로 시작 */
+    background-size: 0% 100%; 
     transition: background-size 1s ease;
     color: #121112;
 }
 
 .tri_con_text.animate {
     animation: textFadeInUp 1s ease forwards;
-    background-size: 100% 100%; /* 애니메이션 중 배경이 전체를 덮도록 설정 */
+    background-size: 100% 100%; 
 }
 
 .tri_con_text0 {
@@ -349,7 +327,7 @@ height: auto;
     position: relative;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease; /* 텍스트가 위로 올라오도록 설정 */
+    transition: opacity 1s ease, transform 1s ease; 
 }
 
 .tri_con_text0.animate {

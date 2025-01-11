@@ -101,7 +101,7 @@
     transform: scale(0.95);
   }
   
-  /* 애니메이션 클래스 적용 */
+  
   .click_main_link .click_title.animate,
   .click_main_link .click_text p.animate {
     opacity: 1;
@@ -112,25 +112,25 @@
     opacity: 1;
   }
 
-  /* 기본 스타일 */
+
 .click_text p {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
   }
   
-  /* 애니메이션 클래스 적용 */
+ 
   .click_text p.animate {
     opacity: 1;
     transform: translateY(0);
   }
   
   .click_text p:nth-of-type(1) {
-    transition-delay: 0.2s; /* 첫 번째 p 요소의 딜레이 */
+    transition-delay: 0.2s; 
   }
   
   .click_text p:nth-of-type(2) {
-    transition-delay: 0.6s; /* 두 번째 p 요소의 딜레이 */
+    transition-delay: 0.6s; 
   }
   
   /* project process */
